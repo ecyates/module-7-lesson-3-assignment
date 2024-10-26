@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Form</h1>
+
+        <form action="file:///Users/elizabethyates/Desktop/My%20Documents/Coding/Coding%20Temple/CT%20Homework/Module%207%20-%20HTML/Lesson%203%20-%20Responsive%20Web%20Design%20and%20Forms/form.html"method="post">
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="name">Name: </label>
+                <input type="text"id="name"name="name"placeholder="Enter your name"required>
+
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone"name="phone"placeholder="Enter your phone number"pattern="[0-9]{10}"required>
+
+                <!--#1 - Task 1 - Email-->
+                <label for="email">Email: </label>
+                <input type="email"id="email"name="email"placeholder="Enter your email"required>
+                <button type="submit">Submit</button>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Other Information</legend>
+                <!--#1 - Task 2 - Quantity-->
+                <label for="quantity">Quantity: </label>
+                <input type="number"id="quantity"name="quantity"min="0"max="100"step="1"value="1"><br/><br/>
+
+                <!--#1 - Task 3 - Date-->
+                <label for="birthdate">DOB</label>
+                <input type="date"id="birthdate"name="birthdate"><br/><br/>
+
+                <!--#1 - Task 4 - Range-->
+                <label for="volume">Volume: </label>
+                <input type="range"id="volume"name="volume"min="0"max="100"><br/><br/>
+
+                <!--#1 - Task 5 - Color -->
+                <label for="color">Color: </label>
+                <input type="text" id="color"name="color"placeholder="Enter a color"value="Purple"><br/><br/>
+                <button type="submit">Submit</button><br/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Coding Information</legend>
+                <!--#2 - Task 1 - Programming Language Select Menu-->
+                <label for="programming-language">Choose a Programming Language: </label>
+                <select id="programming-language" name="programming-language">
+                    <option value="c">C</option>
+                    <option value="c#">C#</option>
+                    <option value="c++">C++</option>
+                    <option value="html">HTML</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="ruby">Ruby</option>
+                </select><br/><br/>
+
+                <!--#2 - Task 1 - Radio Level of Expertise-->
+                <label>Level of Expertise: </label><br/>
+                <input type="radio"id="beginning"name="expertise"value="beginning">
+                <label for="email">Beginning</label>
+                <input type="radio"id="intermediate"name="expertise"value="intermediate">
+                <label for="phone">Intermediate</label>
+                <input type="radio"id="advanced"name="expertise"value="advanced">
+                <label for="phone">Advanced</label><br/><br/>
+
+                <!--#2 - Task 1 - Checkbox Preferred Development Platforms-->
+                <label>Preferred Development Platforms (Select all that apply): </label><br/>
+                <input type="checkbox"id="web"name="dev-platform"value="web">
+                <label for="email">Web</label>
+                <input type="checkbox"id="mobile"name="dev-platform"value="mobile">
+                <label for="phone">Mobile</label>
+                <input type="checkbox"id="desktop"name="dev-platform"value="desktop">
+                <label for="phone">Desktop</label><br/><br/>
+                <button type="submit">Submit</button><br/>
+            </fieldset>
+
+        </form>
+
+        <div role="alert" aria-live="assertive" id="error-message">
+            <i>Please fill out all required fields. </i>
+        </div>
+    </body>
+</html>
